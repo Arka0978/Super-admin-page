@@ -91,7 +91,7 @@ const AdminLayout = () => {
       icon: <MailOutlined />,
       label: 'Email Settings',
     },
-    
+
   ];
 
   const handleMenuClick = ({ key }) => {
@@ -103,8 +103,8 @@ const AdminLayout = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-    // Redirect to main HRMS login
-    window.location.href = 'http://localhost:3000/login';
+    // Redirect to main HRMS login with a logout flag to clear its state
+    window.location.href = 'http://localhost:3000/login?logout=true';
   };
 
   const userMenuItems = [
